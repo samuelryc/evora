@@ -1,0 +1,118 @@
+@import url(font-awesome.min.css);
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Maitree', serif;
+}
+
+body, html {
+    height: 100%;
+    overflow-y: hidden;
+}
+
+header {
+    background-color: lightgrey;
+    color: white;
+    padding: 20px;
+}
+
+footer {
+    background-color: lightgrey;
+    color: white;
+    padding: 20px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.clear {
+    clear: both;
+}
+
+.social-medias {
+    text-align: right;
+}
+
+.social-medias > a > .fab {
+    color: white;
+    padding-left: 20px;
+}
+
+.page-title-section {
+    float: left;
+}
+
+.page-title-section > h1 > a {
+    color: white;
+    font-size: 36px;
+    letter-spacing: 5px;
+}
+
+.nav {
+    list-style: none;
+}
+
+.nav-item {
+    display: inline;
+    padding: 0 15px;
+}
+
+.nav-item:last-child {
+    padding: 0 0 0 15px;
+}
+
+.nav-link {
+    color: white;
+    font-size: 18px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.nav-link:hover {
+    color: rgb(0, 212, 135);
+}
+
+.nav-menu {
+    float: right;
+    transform: translateY(50%);
+}
+
+.half-page {
+    width: 50%;
+    float: left;
+}
+
+.scrollable-content {
+    overflow-y: scroll;
+    max-height: 100vh;
+}
+
+.hundred-percent-height {
+    height: 100%;
+}
+
+.background-container {
+    background-image: url('../../images/tree-background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    background-position: center;
+}
+
+.content-text-section {
+    padding: 20px;
+    margin: 55% 0;
+}
+
+@media screen and (max-width: 1024px) {
+    .half-page {
+        width: 100%;
+        float: none;
+    }
+}

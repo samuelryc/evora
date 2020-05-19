@@ -3,7 +3,7 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Maitree', serif;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 body, html {
@@ -11,20 +11,34 @@ body, html {
     overflow-y: hidden;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    color: #78a01e;
+}
+
 header {
-    background-color: lightgrey;
-    color: white;
-    padding: 20px;
+    background-color: white;
+    color: black;
+    padding: 30px 40px;
 }
 
 footer {
-    background-color: lightgrey;
-    color: white;
-    padding: 20px;
+    background-color: white;
+    color: black;
+    padding: 30px 40px;
+}
+
+.separator {
+    margin: 30vw 40px;
 }
 
 a {
+    color: black;
     text-decoration: none;
+}
+
+p {
+    font-size: 18px;
+    line-height: 175%;
 }
 
 a:hover {
@@ -44,18 +58,35 @@ a:hover {
     padding-left: 20px;
 }
 
-.page-title-section {
-    float: left;
+.sticky-top {
+    background-color: white;
+    position: sticky;
+    top: 0;
 }
 
-.page-title-section > h1 > a {
-    color: white;
-    font-size: 36px;
-    letter-spacing: 5px;
+.sticky-bottom {
+    background-color: rgb(120, 103, 77);
+    position: sticky;
+    bottom: 0;
+}
+
+.page-title {
+    float: left;
+    margin: auto;
+    padding: 2px 0;
+}
+
+.nav-menu {
+    margin: auto;
+    padding: 10px 0;
 }
 
 .nav {
     list-style: none;
+}
+
+.nav-link {
+    text-transform: uppercase;
 }
 
 .nav-item {
@@ -68,19 +99,15 @@ a:hover {
 }
 
 .nav-link {
-    color: white;
     font-size: 18px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
 }
 
 .nav-link:hover {
-    color: rgb(0, 212, 135);
+    color: #78a01e;
 }
 
 .nav-menu {
     float: right;
-    transform: translateY(50%);
 }
 
 .half-page {
@@ -93,21 +120,50 @@ a:hover {
     max-height: 100vh;
 }
 
-.hundred-percent-height {
-    height: 100%;
-}
-
 .background-container {
-    background-image: url('../../images/tree-background.jpg');
+    background-image: url('../../images/tree1.jpg');
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100%;
     height: 100%;
-    background-position: center;
+    background-position: top;
 }
 
-.content-text-section {
-    padding: 20px;
-    margin: 55% 0;
+.section-content {
+    padding: 0 40px;
+}
+
+.section-content:first-of-type {
+    padding: 20vw 40px 0 40px;
+}
+
+.section-content:last-of-type {
+    padding: 0 40px 20vw 40px;
+}
+
+.section-content > h2 {
+    font-size: 25px;
+    padding-bottom: 20px;
+}
+
+footer ul {
+    list-style-type: none;
+    margin-top: 20px;
+    text-align: center;
+}
+
+footer ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+footer ul li a {
+    font-size: 25px;
+}
+
+
+.copyright p {
+    font-size: 15px;
+    text-align: center;
 }
 
 @media screen and (max-width: 1024px) {

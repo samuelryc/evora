@@ -45,6 +45,11 @@ a:hover {
     text-decoration: none;
 }
 
+.active {
+    color: #78a01e;
+    font-weight: bold;
+}
+
 .clear {
     clear: both;
 }
@@ -129,19 +134,19 @@ a:hover {
     height: 100%;
 }
 
-.section-content {
+.section-container {
     padding: 0 40px;
 }
 
-.section-content:first-of-type {
+.section-container:first-of-type {
     padding: 20vw 40px 0 40px;
 }
 
-.section-content:last-of-type {
+.section-container:last-of-type {
     padding: 0 40px 20vw 40px;
 }
 
-.section-content > h2 {
+.section-container .section-title {
     font-size: 25px;
     padding-bottom: 20px;
 }

@@ -1,9 +1,9 @@
 (function($) {
     // 
     var image_list = {
-        'evora': 'images/tree1.jpg',
-        'about': 'images/tree2.jpg',
-        'other': 'images/tree3.jpg',
+        'tree-1': 'images/tree1.jpg',
+        'tree-2': 'images/tree2.jpg',
+        'tree-3': 'images/tree3.jpg',
         'contact': 'images/tree4.jpg'
     }
 
@@ -19,13 +19,13 @@
                 $('.background-container').css('background-image', 'url(' + image_list[section_name] + ')');
             }
         });
-
     });
 
     // On nav click animation to section
     $('.nav-link').click(function(event) {
         event.preventDefault();
-        $('.scrollable-content').animate({ scrollTop: $($(this).attr('href')).offset().top }, 1000);
+        console.log($($(this).attr('href')).css('padding-top'));
+        $('.scrollable-content').animate({ scrollTop: $($(this).attr('href')).offset().top - parseFloat($('.separator:first-of-type').css('margin-top')) }, 1000);
     });
 
     //if ($('.sticky-top')) {

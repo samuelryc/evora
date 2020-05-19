@@ -24,7 +24,6 @@
     // On nav click animation to section
     $('.nav-link').click(function(event) {
         event.preventDefault();
-        console.log($($(this).attr('href')).css('padding-top'));
         $('.scrollable-content').animate({ scrollTop: $($(this).attr('href')).offset().top - parseFloat($('.separator:first-of-type').css('margin-top')) }, 1000);
     });
 

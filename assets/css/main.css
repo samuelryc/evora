@@ -1,9 +1,9 @@
 @import url(font-awesome.min.css);
 
 * {
+    font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
 }
 
 body, html {
@@ -27,7 +27,7 @@ footer {
     padding: 30px 40px;
 }
 
-.separator {
+.section-separator {
     margin: 30vw 40px;
 }
 
@@ -66,8 +66,8 @@ a:hover {
 
 .sticky-bottom {
     background-color: rgb(120, 103, 77);
-    position: sticky;
     bottom: 0;
+    position: sticky;
 }
 
 .page-title {
@@ -111,63 +111,30 @@ a:hover {
 }
 
 .half-page {
-    width: 50%;
     float: left;
+    height: 100%;
+    width: 50%;
 }
 
 .scrollable-content {
-    overflow-y: scroll;
     max-height: 100vh;
+    overflow-y: scroll;
 }
 
 .background-container {
     background-image: url('../../images/tree1.jpg');
+    background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
     height: 100%;
-    background-position: top;
-    -webkit-animation: fadein 2s;
-    -moz-animation: fadein 2s;
-     -ms-animation: fadein 2s;
-      -o-animation: fadein 2s;
-         animation: fadein 2s;
-}
-
-@keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-
-/* Firefox < 16 */
-@-moz-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-
-/* Safari, Chrome and Opera > 12.1 */
-@-webkit-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-
-/* Internet Explorer */
-@-ms-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-
-/* Opera < 12.1 */
-@-o-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-
-.section-content:first-of-type {
-    padding: 20vw 40px 0 40px;
 }
 
 .section-content {
     padding: 0 40px;
+}
+
+.section-content:first-of-type {
+    padding: 20vw 40px 0 40px;
 }
 
 .section-content:last-of-type {
@@ -194,7 +161,6 @@ footer ul li a {
     font-size: 25px;
 }
 
-
 .copyright p {
     font-size: 15px;
     text-align: center;
@@ -202,7 +168,7 @@ footer ul li a {
 
 @media screen and (max-width: 1024px) {
     .half-page {
-        width: 100%;
         float: none;
+        width: 100%;
     }
 }

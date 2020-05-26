@@ -1,4 +1,6 @@
 (function($) {
+    let scroll_speed = 1; // in seconds
+
     // List of images for every section
     var image_list = {
         'tree-1': 'images/tree1.jpg',
@@ -26,11 +28,6 @@
 
     // On nav click animation to section
     $('.nav-link').click(function(event) {
-        event.preventDefault();
-        $('.scrollable-content').animate({ scrollTop: $($(this).attr('href')).offset().top - parseFloat($('.section-separator:first-of-type').css('margin-top')) }, 1000);
+        $('.scrollable-content').animate({ scrollTop: $($(this).attr('href')).offset().top - $('.scrollable-content').offset().top + $('.scrollable-content').scrollTop() - $('.sticky-top').outerHeight() }, scroll_speed * 1000);
     });
-
-    //if ($('.sticky-top')) {
-        //scroll should take into consideration the height of the stickytop
-    //}
 })(jQuery);

@@ -28,7 +28,7 @@ footer {
 }
 
 .section-separator {
-    margin: 30vw 40px;
+    margin: 0 40px 50vw 40px;
 }
 
 a {
@@ -139,11 +139,11 @@ a:hover {
 }
 
 .section-container:first-of-type {
-    padding: 20vw 40px 0 40px;
+    padding: 0 40px 0 40px;
 }
 
 .section-container:last-of-type {
-    padding: 0 40px 20vw 40px;
+    padding: 0 40px 50vw 40px;
 }
 
 .section-container .section-title {

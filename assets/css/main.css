@@ -159,7 +159,7 @@ footer ul li a {
 }
 
 .sticky-bottom {
-    background-color: rgb(120, 103, 77);
+    background-color: white;
     bottom: 0;
     position: sticky;
 }

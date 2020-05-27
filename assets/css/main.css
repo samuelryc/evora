@@ -15,24 +15,12 @@ h1, h2, h3, h4, h5, h6 {
     color: #78a01e;
 }
 
-header {
-    background-color: white;
-    color: black;
-    padding: 30px 40px;
-}
-
-footer {
-    background-color: white;
-    color: black;
-    padding: 30px 40px;
-}
-
-.section-separator {
-    margin: 0 40px 50vw 40px;
-}
-
 a {
     color: black;
+    text-decoration: none;
+}
+
+a:hover {
     text-decoration: none;
 }
 
@@ -41,8 +29,29 @@ p {
     line-height: 175%;
 }
 
-a:hover {
-    text-decoration: none;
+header {
+    background-color: white;
+    padding: 30px 40px;
+}
+
+footer {
+    background-color: white;
+    padding: 30px 40px;
+}
+
+footer ul {
+    list-style-type: none;
+    margin-top: 20px;
+    text-align: center;
+}
+
+footer ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+footer ul li a {
+    font-size: 25px;
 }
 
 .active {
@@ -50,35 +59,27 @@ a:hover {
     font-weight: bold;
 }
 
+.background-container {
+    background-image: url('../../images/tree1.jpg');
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+}
+
 .clear {
     clear: both;
 }
 
-.social-medias {
-    text-align: right;
+.copyright p {
+    font-size: 15px;
+    text-align: center;
 }
 
-.social-medias > a > .fab {
-    color: white;
-    padding-left: 20px;
-}
-
-.sticky-top {
-    background-color: white;
-    position: sticky;
-    top: 0;
-}
-
-.sticky-bottom {
-    background-color: rgb(120, 103, 77);
-    bottom: 0;
-    position: sticky;
-}
-
-.page-title {
+.half-page {
     float: left;
-    margin: auto;
-    padding: 2px 0;
+    height: 100%;
+    width: 50%;
 }
 
 .nav-menu {
@@ -115,23 +116,10 @@ a:hover {
     float: right;
 }
 
-.half-page {
+.page-title {
     float: left;
-    height: 100%;
-    width: 50%;
-}
-
-.scrollable-content {
-    max-height: 100vh;
-    overflow-y: scroll;
-}
-
-.background-container {
-    background-image: url('../../images/tree1.jpg');
-    background-position: top;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100%;
+    margin: auto;
+    padding: 2px 0;
 }
 
 .section-container {
@@ -139,7 +127,7 @@ a:hover {
 }
 
 .section-container:first-of-type {
-    padding: 0 40px 0 40px;
+    padding: 30px 40px 0 40px;
 }
 
 .section-container:last-of-type {
@@ -151,24 +139,33 @@ a:hover {
     padding-bottom: 20px;
 }
 
-footer ul {
-    list-style-type: none;
-    margin-top: 20px;
-    text-align: center;
+.section-separator {
+    margin: 0 40px 50vw 40px;
 }
 
-footer ul li {
-    display: inline;
-    margin: 0 15px;
+.scrollable-content {
+    max-height: 100vh;
+    overflow-y: scroll;
 }
 
-footer ul li a {
-    font-size: 25px;
+.social-medias {
+    text-align: right;
 }
 
-.copyright p {
-    font-size: 15px;
-    text-align: center;
+.social-medias > a > .fab {
+    color: white;
+    padding-left: 20px;
+}
+
+.sticky-bottom {
+    background-color: rgb(120, 103, 77);
+    bottom: 0;
+    position: sticky;
+}
+
+.sticky-top {
+    position: sticky;
+    top: 0;
 }
 
 @media screen and (max-width: 1024px) {

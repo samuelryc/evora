@@ -1,5 +1,6 @@
 (function($) {
-    let scroll_speed = 1; // in seconds
+    const NAV_CLICK_SCROLL_SPEED = 1; // in seconds
+    const SECTION_ONSCROLL_TOP_PADDING = 30; // in pixels
 
     // List of images for every section
     var image_list = {
@@ -28,6 +29,10 @@
 
     // On nav click animation to section
     $('.nav-link').click(function(event) {
-        $('.scrollable-content').animate({ scrollTop: $($(this).attr('href')).offset().top - $('.scrollable-content').offset().top + $('.scrollable-content').scrollTop() - $('.sticky-top').outerHeight() }, scroll_speed * 1000);
+        if ($('.sticky-top').length) {
+            $('.scrollable-content').animate({ scrollTop: $($(this).attr('href')).offset().top - $('.scrollable-content').offset().top + $('.scrollable-content').scrollTop() - $('.sticky-top').outerHeight() - SECTION_ONSCROLL_TOP_PADDING }, NAV_CLICK_SCROLL_SPEED * 1000);
+        } else {
+            $('.scrollable-content').animate({ scrollTop: $($(this).attr('href')).offset().top - $('.scrollable-content').offset().top + $('.scrollable-content').scrollTop() }, SECTION_ONSCROLL_TOP_PADDING * 1000);
+        }
     });
 })(jQuery);

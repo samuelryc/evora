@@ -13,7 +13,7 @@
     // On scroll, check if a new section is seen
     $('.scrollable-content').on('scroll', function() {
         $.each(image_list, function (section_name, image_url) {
-            if ($('#' + section_name + ' ' + 'p').isInViewport()) {
+            if ($('#' + section_name).isInViewport()) {
                 $('#navlink-' + section_name).addClass('active');
                 $('.background-container').css('background-image', 'url(' + image_url + ')');
             } else {

@@ -110,6 +110,7 @@ footer ul li a {
 
 .nav-link:hover {
     color: #78a01e;
+    font-weight: bold;
 }
 
 .nav-menu {

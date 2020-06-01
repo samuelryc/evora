@@ -1,11 +1,5 @@
 @import url(font-awesome.min.css);
 
-* {
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
 body, html {
     height: 100%;
     overflow-y: hidden;
@@ -47,11 +41,7 @@ footer ul {
 
 footer ul li {
     display: inline;
-    margin: 0 15px;
-}
-
-footer ul li a {
-    font-size: 25px;
+    margin: 0 20px;
 }
 
 .active {
@@ -76,32 +66,15 @@ footer ul li a {
     text-align: center;
 }
 
+.copyright a {
+    color: #78a01e;
+    text-decoration: underline;
+}
+
 .half-page {
     float: left;
     height: 100%;
     width: 50%;
-}
-
-.nav-menu {
-    margin: auto;
-    padding: 10px 0;
-}
-
-.nav {
-    list-style: none;
-}
-
-.nav-link {
-    text-transform: uppercase;
-}
-
-.nav-item {
-    display: inline;
-    padding: 0 15px;
-}
-
-.nav-item:last-child {
-    padding: 0 0 0 15px;
 }
 
 .nav-link {
@@ -110,38 +83,23 @@ footer ul li a {
 
 .nav-link:hover {
     color: #78a01e;
-    font-weight: bold;
-}
-
-.nav-menu {
-    float: right;
-}
-
-.page-title {
-    float: left;
-    margin: auto;
-    padding: 2px 0;
-}
-
-.section-container {
-    padding: 0 40px;
 }
 
 .section-container:first-of-type {
-    padding: 30px 40px 0 40px;
+    padding: 30px 0 0 0;
 }
 
 .section-container:last-of-type {
-    padding: 0 40px 31vw 40px;
+    padding: 0 0 31vw 0;
 }
 
-.section-container .section-title {
+.section-title {
     font-size: 25px;
     padding-bottom: 20px;
 }
 
 .section-separator {
-    margin: 0 40px 50vw 40px;
+    margin: 0 40px 45vw 40px;
 }
 
 .scrollable-content {
@@ -149,24 +107,14 @@ footer ul li a {
     overflow-y: scroll;
 }
 
-.social-medias {
-    text-align: right;
-}
-
-.social-medias > a > .fab {
-    color: white;
-    padding-left: 20px;
+.social-medias i {
+    font-size: 18px;
 }
 
 .sticky-bottom {
     background-color: white;
     bottom: 0;
     position: sticky;
-}
-
-.sticky-top {
-    position: sticky;
-    top: 0;
 }
 
 @media screen and (max-width: 1024px) {

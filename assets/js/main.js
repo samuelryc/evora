@@ -3,6 +3,7 @@
     const ONSCROLL_SECTION_TOP_PADDING = 30; // in pixels
 
     // List of images for every section
+    // id : image path
     var image_list = {
         'tree-1': 'images/tree1.jpg',
         'tree-2': 'images/tree2.jpg',

@@ -7,6 +7,7 @@
 		<meta name="description" content="" />
         <meta name="keywords" content="" />
         <meta name="author" content="" />
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
         <link rel="stylesheet" href="assets/css/main.css" />
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous" />
         <!-- Add your favicon -->
@@ -30,55 +31,63 @@
     <body>
         <div class="half-page scrollable-content">
             <header class="sticky-top">
-                <div class="page-title">
-                    <a href="#">
-                        <h1>Evora</h1>
-                    </a>
-                </div>
-                <div class="nav-menu">
-                    <ul class="nav">
-                        <li class="nav-item">
-                            <a id="navlink-tree-1" class="nav-link active" href="#tree-1">Tree #1</a>
-                        </li>
-                        <li class="nav-item">
-                            <a id="navlink-tree-2" class="nav-link" href="#tree-2">Tree #2</a>
-                        </li>
-                        <li class="nav-item">
-                            <a id="navlink-tree-3" class="nav-link" href="#tree-3">Tree #3</a>
-                        </li>
-                        <li class="nav-item">
-                            <a id="navlink-contact" class="nav-link" href="#contact">Contact</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="clear"></div>
+                <nav class="navbar navbar-expand-lg">
+                    <a class="navbar-brand" href="#">Evora</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                        <div class="navbar-nav">
+                            <a id="navlink-tree-1" class="nav-item nav-link active" href="#">Tree&nbsp;#1</a>
+                            <a id="navlink-tree-2" class="nav-item nav-link" href="#">Tree&nbsp;#2</a>
+                            <a id="navlink-tree-3" class="nav-item nav-link" href="#">Tree&nbsp;#3</a>
+                            <a id="navlink-contact" class="nav-item nav-link" href="#">Contact</a>
+                        </div>
+                    </div>
+                </nav>
             </header>
 
-            <div>
+            <div class="container">
                 <section id="tree-1" class="section-container">
-                    <h2 class="section-title">Tree #1</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <div class="row">
+                        <div class="col">
+                            <h2 class="section-title">Tree #1</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        </div>
+                    </div>
                 </section>
 
                 <div class="section-separator"></div>
 
                 <section id="tree-2" class="section-container">
-                    <h2 class="section-title">Tree #2</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <div class="row">
+                        <div class="col">
+                            <h2 class="section-title">Tree #2</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        </div>
+                    </div>
                 </section>
 
                 <div class="section-separator"></div>
 
                 <section id="tree-3" class="section-container">
-                    <h2 class="section-title">Tree #3</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <div class="row">
+                        <div class="col">
+                            <h2 class="section-title">Tree #3</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        </div>
+                    </div>
                 </section>
 
                 <div class="section-separator"></div>
 
                 <section id="contact" class="section-container">
-                    <h2 class="section-title">Contact</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <div class="row">
+                        <div class="col">
+                            <h2 class="section-title">Contact</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        </div>
+                    </div>
                 </section>
             </div>
 
@@ -119,7 +128,8 @@
             <div class="background-container"></div>
         </div>
     </body>
-    
+
     <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
     <script defer src="assets/js/main.js"></script>
 </html>

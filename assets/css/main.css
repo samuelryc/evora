@@ -25,12 +25,10 @@ p {
 
 header {
     background-color: white;
-    padding: 30px 40px;
 }
 
 footer {
     background-color: white;
-    padding: 30px 40px;
 }
 
 footer ul {
@@ -77,6 +75,10 @@ footer ul li {
     width: 50%;
 }
 
+.navbar {
+    padding: 30px 0;
+}
+
 .nav-link {
     font-size: 18px;
 }
@@ -115,6 +117,7 @@ footer ul li {
     background-color: white;
     bottom: 0;
     position: sticky;
+    padding: 30px 0;
 }
 
 @media screen and (max-width: 1024px) {

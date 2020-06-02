@@ -34,7 +34,16 @@
 
     // Helper function that checks if the section is currently seen by the web site visitor
     $.fn.isInViewport = function() {
-        if ((($(this).offset().top + $(this).outerHeight()) >= $(window).scrollTop()) && ($(this).offset().top <= ($(window).scrollTop() + $(window).height()))) {
+        let sticky_top = 0, sticky_bottom = 0;
+        if ($('.sticky-top').length) {
+            sticky_top = $('.sticky-top').outerHeight();
+        }
+
+        if ($('.sticky-bottom').length) {
+            sticky_bottom = $('.sticky-bottom').outerHeight();
+        }
+
+        if ((($(this).offset().top + $(this).outerHeight()) >= $(window).scrollTop() + sticky_top) && ($(this).offset().top <= ($(window).scrollTop() + $(window).height() - sticky_bottom ))) {
             return true;
         }
 

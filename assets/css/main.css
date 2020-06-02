@@ -44,7 +44,6 @@ footer ul li {
 
 .active {
     color: #78a01e;
-    font-weight: bold;
 }
 
 .background-container {
@@ -101,7 +100,7 @@ footer ul li {
 }
 
 .section-separator {
-    margin: 0 40px 45vw 40px;
+    height: 72vw;
 }
 
 .scrollable-content {

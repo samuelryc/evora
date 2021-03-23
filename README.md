@@ -3,7 +3,7 @@ This is the Evora template created by [me](https://samuelryc.com).
 
 ## Languages
 * HTML
-* CSS
+* CSS (Bootstrap)
 * JavaScript (Vanilla)
 
 

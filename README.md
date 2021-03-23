@@ -1,5 +1,5 @@
 # Evora
-This is the Evora template created by [me](https://samuelryc.com).
+This is the Evora template created by [Samuel Ryc](https://samuelryc.com).
 
 ## Languages
 * HTML

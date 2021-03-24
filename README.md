@@ -6,7 +6,7 @@ This is the Evora template created by [Samuel Ryc](https://samuelryc.com).
 * CSS (Bootstrap)
 * JavaScript (jQuery)
 
-## Example
+## Preview
 A full preview of what the template looks like is [here](https://evroa.samuelryc.com).
 
 ## Support

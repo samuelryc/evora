@@ -1,13 +1,10 @@
 # Evora
-This is the Evora template created by [Samuel Ryc](https://samuelryc.com).
+This is the Evora template created by [Samuel Ryc](https://github.com/samuelryc).
 
 ## Languages
 * HTML
 * CSS (Bootstrap)
 * JavaScript (jQuery)
-
-## Preview
-A full preview of what the template looks like is [here](https://evora.samuelryc.com).
 
 ## Photos
 * Tree #1 section photo by Johann Siemens on [Unsplash](https://unsplash.com).

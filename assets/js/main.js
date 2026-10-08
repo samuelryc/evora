@@ -1,52 +1,84 @@
-(function($) {
-    const NAV_CLICK_SCROLL_SPEED = 1; // in seconds
-    const ONSCROLL_SECTION_TOP_PADDING = 30; // in pixels
+(function () {
+    var SECTION_TOP_PADDING = 30;
 
-    // List of images for every section
-    // id : image path
-    var image_list = {
+    var imageList = {
         'tree-1': 'images/tree1.jpg',
         'tree-2': 'images/tree2.jpg',
         'tree-3': 'images/tree3.jpg',
         'contact': 'images/tree4.jpg'
+    };
+
+    var scroller = document.querySelector('.scrollable-content');
+    var background = document.querySelector('.background-container');
+    var stickyTop = document.querySelector('.sticky-top');
+    var stickyBottom = document.querySelector('.sticky-bottom');
+    var navCollapse = document.getElementById('navbarNavAltMarkup');
+
+    function isInView(section) {
+        var scrollerRect = scroller.getBoundingClientRect();
+        var rect = section.getBoundingClientRect();
+        var topOffset = stickyTop ? stickyTop.offsetHeight : 0;
+        var bottomOffset = stickyBottom ? stickyBottom.offsetHeight : 0;
+
+        return rect.bottom >= scrollerRect.top + topOffset &&
+            rect.top <= scrollerRect.bottom - bottomOffset;
     }
 
-    // On scroll, check if a new section is seen
-    $('.scrollable-content').on('scroll', function() {
-        $.each(image_list, function (section_name, image_url) {
-            if ($('#' + section_name).isInViewport()) {
-                $('#navlink-' + section_name).addClass('active');
-                $('.background-container').css('background-image', 'url(' + image_url + ')');
+    function syncActiveSection() {
+        Object.keys(imageList).forEach(function (sectionName) {
+            var section = document.getElementById(sectionName);
+            var link = document.getElementById('navlink-' + sectionName);
+            if (!section || !link) {
+                return;
+            }
+
+            if (isInView(section)) {
+                link.classList.add('active');
+                link.setAttribute('aria-current', 'true');
+                if (background) {
+                    background.style.backgroundImage = 'url("' + imageList[sectionName] + '")';
+                }
             } else {
-                $('#navlink-' + section_name).removeClass('active');
+                link.classList.remove('active');
+                link.removeAttribute('aria-current');
+            }
+        });
+    }
+
+    if (scroller) {
+        scroller.addEventListener('scroll', syncActiveSection, { passive: true });
+        syncActiveSection();
+    }
+
+    document.querySelectorAll('.nav-link').forEach(function (link) {
+        link.addEventListener('click', function (event) {
+            var href = link.getAttribute('href');
+            if (!href || href.charAt(0) !== '#' || !scroller) {
+                return;
+            }
+
+            var target = document.querySelector(href);
+            if (!target) {
+                return;
+            }
+
+            event.preventDefault();
+
+            var headerOffset = stickyTop ? stickyTop.offsetHeight : 0;
+            var top = target.getBoundingClientRect().top -
+                scroller.getBoundingClientRect().top +
+                scroller.scrollTop -
+                headerOffset -
+                SECTION_TOP_PADDING;
+
+            scroller.scrollTo({
+                top: top,
+                behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth'
+            });
+
+            if (navCollapse && navCollapse.classList.contains('show') && window.bootstrap) {
+                window.bootstrap.Collapse.getOrCreateInstance(navCollapse).hide();
             }
         });
     });
-
-    // On nav click animation to section
-    $('.nav-link').click(function(event) {
-        if ($('.sticky-top').length) { // if the sticky top header is present, take it into consideration before scrolling to element
-            $('.scrollable-content').animate({ scrollTop: $($(this).attr('href')).offset().top - $('.scrollable-content').offset().top + $('.scrollable-content').scrollTop() - $('.sticky-top').outerHeight() - ONSCROLL_SECTION_TOP_PADDING }, NAV_CLICK_SCROLL_SPEED * 1000);
-        } else {
-            $('.scrollable-content').animate({ scrollTop: $($(this).attr('href')).offset().top - $('.scrollable-content').offset().top + $('.scrollable-content').scrollTop() }, ONSCROLL_SECTION_TOP_PADDING * 1000);
-        }
-    });
-
-    // Helper function that checks if the section is currently seen by the web site visitor
-    $.fn.isInViewport = function() {
-        let sticky_top = 0, sticky_bottom = 0;
-        if ($('.sticky-top').length) {
-            sticky_top = $('.sticky-top').outerHeight();
-        }
-
-        if ($('.sticky-bottom').length) {
-            sticky_bottom = $('.sticky-bottom').outerHeight();
-        }
-
-        if ((($(this).offset().top + $(this).outerHeight()) >= $(window).scrollTop() + sticky_top) && ($(this).offset().top <= ($(window).scrollTop() + $(window).height() - sticky_bottom ))) {
-            return true;
-        }
-
-        return false;
-    }
-})(jQuery);
+})();

@@ -1,10 +1,13 @@
 # Evora
 This is the Evora template created by [Samuel Ryc](https://github.com/samuelryc).
 
-## Languages
+## Stack
 * HTML
-* CSS (Bootstrap)
-* JavaScript (jQuery)
+* CSS — [Bootstrap 5.3.8](https://getbootstrap.com/) (jsDelivr, SRI)
+* Icons — [Font Awesome 6.7.2](https://fontawesome.com/) free (jsDelivr, SRI)
+* JavaScript — vanilla (no jQuery)
+
+Pinned CDN builds so GitHub Pages needs no install step. Versions match `package.json`.
 
 ## Photos
 * Tree #1 section photo by Johann Siemens on [Unsplash](https://unsplash.com).
